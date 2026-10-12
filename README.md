@@ -132,3 +132,32 @@ Node rules is distributed under the MIT License.
 
 The JSON friendly rule formats used in version 2.x.x of this module were initially based on the node module [jools](https://github.com/tdegrunt/jools).
 The screencast image shown in this page is taken from [nmotv.in](http://nmotw.in/node-rules/) which has a pretty nice article on how to use this module!
+
+
+1
+
+Add a comparison operator
+Add support for a new comparison, such as transactionTotal !== threshold, using the repository's existing condition conventions.
+- Keep the change minimal.
+- Preserve existing operators.
+- Add tests for matching and non-matching values.
+
+
+
+2
+
+Handle missing transaction fields
+Make condition evaluation behave predictably when a required field is missing.
+- Inspect existing behavior first.
+- Avoid unexpected runtime errors.
+- Add tests for missing and present fields.
+
+
+
+3
+
+Support compound conditions
+Extend a rule to check two conditions together, if the required form isn't already supported.
+- Follow existing APIs.
+- Test both conditions true, one false, and both false.
+- Preserve existing rule behavior.
